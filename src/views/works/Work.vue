@@ -1,0 +1,84 @@
+<template>
+    <v-container>
+        <v-row>
+            <v-col cols="12"
+                   md="8" >
+
+                <v-carousel
+                        :show-arrows="true"
+                        hide-delimiters
+                >
+
+                    <v-carousel-item  v-for="(item,i) in work.imagesSrc"  :key="i">
+                        <v-img :src="item"  contain  aspect-ratio="1.7778" >
+                            <template v-slot:placeholder>
+                                <v-row
+                                        class="fill-height ma-0"
+                                        align="center"
+                                        justify="center"
+                                >
+                                    <v-progress-circular indeterminate color="red"></v-progress-circular>
+                                </v-row>
+                            </template>
+                        </v-img>
+
+                    </v-carousel-item>
+
+                </v-carousel>
+            </v-col>
+
+            <v-col  cols="6"
+                    md="4" sc>
+                <v-row>
+                    <v-card-title v-text="work.title"></v-card-title>
+                </v-row>
+               <v-row>
+                   <p>
+                       {{work.description}}
+                   </p>
+               </v-row>
+
+                <v-row>
+                    <v-btn
+                            v-for="(repo,i) in work.repositories"
+                            :key="i.src"
+                            :href="repo.src" target="_blank"
+                            x-small
+                    >
+                        <v-icon left dark>fab fa-github</v-icon>
+                        {{repo.name}}
+                    </v-btn>
+                </v-row>
+
+
+                <v-row>
+                    <v-chip v-for="(tool) in work.tools " :key="tool"
+                            class="ma-2"
+                            outlined
+                            color="primary"
+                    >
+                       <v-icon left  >fab fa-{{tool}}</v-icon>
+                        {{tool}}
+                    </v-chip>
+
+                </v-row>
+
+            </v-col>
+        </v-row>
+    </v-container>
+
+</template>
+
+<script>
+    export default {
+        name: "Work",
+        props:{
+            work:Object
+        },
+
+    }
+</script>
+
+<style scoped>
+
+</style>
