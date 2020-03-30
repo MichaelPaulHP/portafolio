@@ -28,17 +28,20 @@
                         >
                             <span class="mr-2">Works</span>
                         </v-btn>
-                        <v-btn
-                                to="/contacts"
-                        >
-                            <span class="mr-2">Contacts</span>
-                        </v-btn>
 
                         <v-btn
                                 to="/skills"
                         >
                             <span class="mr-2">Skills</span>
                         </v-btn>
+
+                        <v-btn
+                                to="/contacts"
+                        >
+                            <span class="mr-2">Contacts</span>
+                        </v-btn>
+
+
 
 
                         <v-switch
@@ -50,7 +53,9 @@
                     </v-app-bar>
 
                     <v-content>
-                        <router-view></router-view>
+                        <transition name="fade">
+                            <router-view></router-view>
+                        </transition>
                     </v-content>
 
 
