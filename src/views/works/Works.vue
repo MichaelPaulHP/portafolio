@@ -1,35 +1,72 @@
 <template>
+
     <v-window>
-        <TextStroke text="Proyectos"></TextStroke>
-        <v-carousel
-                :hide-delimiters="true"
-                :show-arrows="true"
-                height="auto"
-        >
-            <v-row
+        <v-row>
+            <v-col cols="12">
+                <TextStroke text="Proyectos"></TextStroke>
+            </v-col>
+            <v-col cols="12">
 
-                    align="center"
-                    justify="center"
-            >
+                <v-row>
+                    <v-col cols="12">
+                        <v-item-group
+                                v-model="window"
+                                class="shrink mr-6"
+                                mandatory
+                                tag="v-flex"
 
-                    <v-carousel-item
-                            v-for="(work,i) in works"
-                            :key="i"
-                            reverse-transition="fade-transition"
-                            transition="fade-transition"
-                            :prev-icon="false"
-                            :cycle="true"
-                            :progress="true"
-                    >
+                        >
+                            <v-item
+                                    v-for="(work,i) in works"
+                                    :key="i"
+                                    v-slot:default="{ active, toggle }"
 
-                        <work :work="work" ></work>
+                            >
 
-                    </v-carousel-item>
+                                    <v-btn
+                                            :input-value="active"
+                                            icon
+                                            @click="toggle"  x-large
+                                    >
 
-            </v-row>
+                                            <div>
+                                            <v-img height="30" width="30" :src="work.icon"> </v-img>
+                                            <div>
+                                                <v-icon v-if="active" color="accent"> fas fa-angle-up </v-icon>
+                                            </div>
+                                            </div>
+                                    </v-btn>
 
 
-        </v-carousel>
+
+
+
+                            </v-item>
+                        </v-item-group>
+                    </v-col>
+
+                    <v-col cols="12"  >
+                        <v-window
+                                v-model="window"
+
+
+                        >
+                            <v-window-item
+                                    v-for="(work,i) in works"
+                                    :key="i"
+
+                            >
+                                <work :work="work" ></work>
+                            </v-window-item>
+                        </v-window>
+                    </v-col>
+
+                </v-row>
+
+            </v-col>
+        </v-row>
+
+
 
     </v-window>
 </template>
@@ -46,6 +83,7 @@
         data: function () {
             return {
                 works:worksList,
+                window: 0,
                 windowsHeight:0,
             }
         },

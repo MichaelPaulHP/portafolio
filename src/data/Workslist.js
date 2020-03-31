@@ -30,7 +30,8 @@ let worksList=[
         [
             {name:"App Mobil",src:"https://github.com/MichaelPaulHP/Concurrent"},
             {name:"BackEnd",src:"https://github.com/MichaelPaulHP/concurrentServe"}
-        ]
+        ],
+        pathImage+"/c/icon.png"
     ),
     new Project("Home",
         "Lo más importante que aprendí: falta de comunicación" +
@@ -48,8 +49,8 @@ let worksList=[
             "Firebase Admin","Python","Raspberry PI","RxPy","Usabilidad","Google Assistant","DialogFlow"
         ],
         [
-            pathImage+"/home_black.jpg",
             pathImage+"/home_white.jpg",
+            pathImage+"/home_black.jpg",
             pathImage+"/home_menu.jpg",
             pathImage+"/home_config.jpg",
             pathImage+"/home_info.jpg",
@@ -62,7 +63,8 @@ let worksList=[
             {name:"BackEnd",src:"https://github.com/MichaelPaulHP/ihomeServe"},
             {name:"App Mobil",src:"https://github.com/MichaelPaulHP/IHome"},
             {name:"Raspberry PI",src:"https://github.com/MichaelPaulHP/ihomeServe"}
-        ]
+        ],
+        pathImage+"/icon.png"
     ),
     new Project("Encrypt-Criptografía asimétrica ",
         "Lo más importante fue sockets, fue mi primera vez que he" +
@@ -82,7 +84,8 @@ let worksList=[
         [
             {name:"App Mobil",src:"https://github.com/MichaelPaulHP/Encrypt"},
             {name:"BackEnd",src:"https://github.com/MichaelPaulHP/Encrypt"}
-            ]
+            ],
+        pathImage+"/mobil.png"
     ),
 
     new Project(
@@ -108,7 +111,28 @@ let worksList=[
         ],
         [
             {name:"Repositorio",src:"https://github.com/DeyvyMY/SICPAV2"},
-        ]
+        ],
+        pathImage+"/web.png"
+    ),
+    new Project(
+        "Portafolio",
+        "Mi sitio personal es una PWA para dar a conocer mis proyectos," +
+        " esta hecho totalmente con VueJS,  con la reutilización de" +
+        " componentes de Vuetify  he logrado implementar esta " +
+        "aplicación de manera muy rápida, la dificultad que tuve" +
+        " fue en el diseño de la UI en como mostrar mis proyectos ",
+        [
+            "PWA","VueJS","Vuetify","Firebase Analytics","Firebase hosting","Git","GitHub",
+        ],
+        [
+            pathImage+"/portafolio/main.png",
+            pathImage+"/portafolio/mainB.png",
+            pathImage+"/portafolio/mobil.jpg",
+        ],
+        [
+            {name:"Repositorio",src:"https://github.com"},
+        ],
+        pathImage+"/portafolio/icon.png"
     ),
 ];
 

@@ -2,57 +2,82 @@
     <v-app>
         <v-container>
             <v-row>
-                <v-col>
+                <v-col cols="12">
 
                     <v-app-bar
-                        color="transparent"
-                        flat
+                            color="transparent"
+                            flat
+
                     >
                         <v-spacer></v-spacer>
 
-                        <v-btn
-                                to="/"
-                        >
-                            <span class="mr-2">/</span>
+                        <v-btn v-on:click="$vuetify.theme.dark=!$vuetify.theme.dark" elevation="0">
+                            <v-icon v-if="$vuetify.theme.dark" color="yellow" size="small">
+                                fas fa-sun
+                            </v-icon>
+                            <v-icon v-if="!$vuetify.theme.dark" size="small" >
+                                fas fa-moon
+                            </v-icon>
                         </v-btn>
 
                         <v-btn
-                            to="/about"
+                                color="transparent"
+                                elevation="0"
+                                @click.stop="drawer = !drawer"
                         >
-                            <span class="mr-2">About</span>
+                            <v-icon size="medium" >
+                                fas fa-bars
+                            </v-icon>
                         </v-btn>
 
 
-                        <v-btn
-                                to="/works"
-                        >
-                            <span class="mr-2">Works</span>
-                        </v-btn>
-
-                        <v-btn
-                                to="/skills"
-                        >
-                            <span class="mr-2">Skills</span>
-                        </v-btn>
-
-                        <v-btn
-                                to="/contacts"
-                        >
-                            <span class="mr-2">Contacts</span>
-                        </v-btn>
-
-
-
-
-                        <v-switch
-                            v-model="$vuetify.theme.dark"
-                            hide-details
-                            inset
-                            label="Theme Dark"
-                        ></v-switch>
                     </v-app-bar>
 
-                    <v-content>
+                    <v-navigation-drawer
+                            v-model="drawer"
+                            absolute
+                            temporary
+                            right
+                            disable-resize-watcher
+                    >
+                        <v-list-item>
+                            <v-list-item-avatar>
+                                <v-img></v-img>
+                            </v-list-item-avatar>
+
+                            <v-list-item-content>
+                                <v-list-item-title>Michael Huahuasoncco</v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+
+                        <v-divider></v-divider>
+
+                        <v-list dense>
+
+                            <v-list-item
+                                    v-for="item in items"
+                                    :key="item.title"
+                                    link
+                                    :to="item.uri"
+                            >
+                                <v-list-item-icon>
+                                    <v-icon size="x-small">{{ item.icon }}</v-icon>
+
+                                </v-list-item-icon>
+
+                                <v-list-item-content>
+
+                                    <v-list-item-title>
+                                        {{ item.title }}
+
+                                    </v-list-item-title>
+
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list>
+                    </v-navigation-drawer>
+
+                    <v-content >
                         <transition name="fade">
                             <router-view></router-view>
                         </transition>
@@ -60,7 +85,8 @@
 
 
                     <v-footer
-                        absolute
+                            absolute
+
                     >
                         <span>
                             Código limpio con  ❤ por Michael Huahuasoncco
@@ -89,7 +115,16 @@
         components: {},
 
         data: () => ({
-            //
+
+            drawer: null,
+            items: [
+                {title: '/', icon: 'fas fa-square-full', uri: "/"},
+                {title: 'About', icon: 'fas fa-square-full', uri: "/about"},
+                {title: 'Works', icon: 'fas fa-square-full', uri: "/works"},
+                {title: 'Skills', icon: 'fas fa-square-full', uri: "/skills"},
+                {title: 'Contacts', icon: 'fas fa-square-full', uri: "/contacts"},
+
+            ],
         }),
     };
 </script>

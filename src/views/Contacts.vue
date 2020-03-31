@@ -1,52 +1,49 @@
 <template>
     <v-container fluid >
         <v-row  style="height: 550px">
-            <v-col cols="3">
+            <v-col cols="12" >
                 <TextStroke text="Contacto"></TextStroke>
             </v-col>
 
-            <v-col cols="6" align-self="center">
+            <v-col cols="12" align-self="center">
 
-                    <h1> michael_h_p_@hotmail.com</h1>
+                    <v-card-title> michael_h_p_@hotmail.com</v-card-title>
 
             </v-col>
 
 
 
-            <v-col cols="3" align-self="center">
+            <v-col cols="12" align-self="center">
 
-                <v-row >
+                <v-row align="center" justify="center" >
                     <v-btn
                             href="https://github.com/MichaelPaulHP" target="_blank"
                     >
                         <v-icon left dark>fab fa-github</v-icon>
                         GitHub
                     </v-btn>
-                </v-row>
-                <v-row style="margin-top: 20px;">
                     <v-btn
-                             target="_blank"
+                            target="_blank"
                     >
                         <v-icon left dark>fas fa-envelope</v-icon>
                         Email
                     </v-btn>
-                </v-row>
-                <v-row style="margin-top: 20px;">
                     <v-btn
                             target="_blank"
                     >
                         <v-icon left dark>fas fa-mobile-alt</v-icon>
                         Phone: (+51) 999766470
                     </v-btn>
-                </v-row>
-                <v-row style="margin-top: 20px;">
                     <v-btn
-                             target="_blank"
+                            target="_blank"
                     >
                         <v-icon left dark>fab fa-linkedin</v-icon>
                         Linkedin
                     </v-btn>
+
                 </v-row>
+
+
 
             </v-col>
 

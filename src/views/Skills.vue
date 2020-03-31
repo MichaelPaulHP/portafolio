@@ -1,21 +1,18 @@
 <template>
-    <v-container>
+    <v-container fluid>
         <v-row>
-            <v-col>
+            <v-col cols="12">
                 <TextStroke text="Habilidades"></TextStroke>
             </v-col>
-        </v-row>
 
-        <v-row>
-            <v-col>
+            <v-col cols="12">
 
-                <div
-                        class="d-flex flex-wrap"
-                >
+                <v-row align="start"
+                       justify="space-around"
+                       >
 
                     <div
                             v-for="(skillGrup,key) in skills" :key="key"
-                            style="padding-right: 75px"
                     >
 
                         <v-card-title>{{key}}</v-card-title>
@@ -28,13 +25,13 @@
                                             length="10"
                                             readonly
                                             :value="rating"
-                                            size="10"
+                                            size="x-small"
 
                                     >
                                         <template v-slot:item="props">
                                             <v-icon
                                                     color="secondary"
-                                                    size="15"
+                                                    size="x-small"
                                             >
                                                 {{ props.isFilled ? 'fas fa-circle' : 'far fa-circle' }}
                                             </v-icon>
@@ -46,15 +43,18 @@
 
                         </div>
 
-
                     </div>
+                </v-row>
 
 
-                </div>
+
+
+
             </v-col>
-
-
         </v-row>
+
+
+
     </v-container>
 </template>
 
