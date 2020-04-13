@@ -15,7 +15,7 @@
 
             <v-col cols="12" align-self="center">
 
-                <v-row align="center" justify="center" >
+                <v-row align="center" justify="space-around" >
                     <v-btn
                             href="https://github.com/MichaelPaulHP" target="_blank"
                     >
@@ -23,13 +23,13 @@
                         GitHub
                     </v-btn>
                     <v-btn
-                            target="_blank"
+                            target="_blank"  href="mailto:michael_h_p_@hotmail.com"
                     >
                         <v-icon left dark>fas fa-envelope</v-icon>
                         Email
                     </v-btn>
                     <v-btn
-                            target="_blank"
+                            target="_blank" href="tel:+51999766470"
                     >
                         <v-icon left dark>fas fa-mobile-alt</v-icon>
                         Phone: (+51) 999766470

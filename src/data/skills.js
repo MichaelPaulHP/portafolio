@@ -54,10 +54,6 @@ let skills =
             Android: 7,
             "Android Jetpack": 6,
         },
-        "Data Base": {
-            MongoDB: 6,
-            SQL: 7,
-        },
         "Version Control Systems": {
             Git: 6,
             GitHub: 5,
