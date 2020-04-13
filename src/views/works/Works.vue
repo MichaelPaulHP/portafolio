@@ -1,6 +1,6 @@
 <template>
 
-    <v-window>
+    <v-window v-model="window">
         <v-row>
             <v-col cols="12">
                 <TextStroke text="Proyectos"></TextStroke>
@@ -73,6 +73,7 @@
         data: function () {
             return {
                 works:worksList,
+                window:0,
             }
         },
 

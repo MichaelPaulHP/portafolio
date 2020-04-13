@@ -31,6 +31,7 @@ export default new Vuetify({
                 warning: '#EBCB8B'
             },
         },
+        dark: true
     },
     icons: {
         iconfont: 'fa',
