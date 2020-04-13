@@ -26,11 +26,11 @@
                                             readonly
                                             :value="rating"
                                             size="x-small"
-
+                                            color="accent"
                                     >
                                         <template v-slot:item="props">
                                             <v-icon
-                                                    color="secondary"
+                                                    color="accent"
                                                     size="x-small"
                                             >
                                                 {{ props.isFilled ? 'fas fa-circle' : 'far fa-circle' }}
