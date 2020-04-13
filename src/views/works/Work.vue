@@ -66,7 +66,7 @@
                     <v-chip v-for="(tool) in work.tools " :key="tool"
                             class="ma-2"
                             outlined
-                            color="primary"
+                            color="warning"
                     >
                         <v-icon left  >fab fa-{{tool}}</v-icon>
                         {{tool}}

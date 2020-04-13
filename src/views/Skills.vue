@@ -15,7 +15,7 @@
                             v-for="(skillGrup,key) in skills" :key="key"
                     >
 
-                        <v-card-title>{{key}}</v-card-title>
+                        <v-card-title > {{key}} </v-card-title>
 
                         <div v-for="(rating,skill) in skillGrup" :key="skill">
                             <v-row>
@@ -30,7 +30,7 @@
                                     >
                                         <template v-slot:item="props">
                                             <v-icon
-                                                    color="accent"
+                                                    color="info"
                                                     size="x-small"
                                             >
                                                 {{ props.isFilled ? 'fas fa-circle' : 'far fa-circle' }}

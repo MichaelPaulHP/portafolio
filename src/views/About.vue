@@ -1,10 +1,10 @@
 <template>
-    <v-container>
+    <v-container id="aboutContainer" >
         <v-row>
             <TextStroke text="Michael Huahuasoncco"></TextStroke>
         </v-row>
         <v-row>
-            <v-col cols="6">
+            <v-col cols="6" >
 
                 <p> Holaa!</p>
                 <p> Mi Nombre es Michael, soy un Ingeniero de Software y estoy emocionado de iniciar
@@ -30,3 +30,13 @@
         components: {TextStroke}
     }
 </script>
+<style>
+    #aboutContainer{
+        background-image: url("/projectImages/about.png");
+        background-repeat: no-repeat;
+        min-height: 90vh;
+        background-position: right;
+        background-attachment: fixed;
+
+    }
+</style>

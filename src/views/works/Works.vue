@@ -36,27 +36,20 @@
                                             </div>
                                             </div>
                                     </v-btn>
-
-
-
-
-
                             </v-item>
                         </v-item-group>
                     </v-col>
 
-                    <v-col cols="12"  >
-                        <v-window
-                                v-model="window"
+                    <v-col cols="12" >
 
-
-                        >
+                        <v-window v-model="window" >
                             <v-window-item
                                     v-for="(work,i) in works"
                                     :key="i"
-
                             >
+
                                 <work :work="work" ></work>
+
                             </v-window-item>
                         </v-window>
                     </v-col>
@@ -65,9 +58,6 @@
 
             </v-col>
         </v-row>
-
-
-
     </v-window>
 </template>
 
@@ -83,13 +73,9 @@
         data: function () {
             return {
                 works:worksList,
-                window: 0,
-                windowsHeight:0,
             }
         },
-        mounted() {
-            this.windowsHeight= window.screen.height;
-        }
+
     }
 </script>
 

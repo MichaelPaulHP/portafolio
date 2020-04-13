@@ -22,7 +22,7 @@
     }
     @supports (-webkit-text-stroke: 1px red) {
         h1 {
-            -webkit-text-stroke: 1px red;
+            -webkit-text-stroke: 1px #88C0D0;
             -webkit-text-fill-color: transparent;
         }
     }

@@ -22,13 +22,13 @@ export default new Vuetify({
                 warning: '#FFC107'
             },
             dark: {
-                primary: '#ee44aa',
-                secondary: '#232830',
-                accent: '#FFAA00',
-                error: '#FF5252',
-                info: '#2196F3',
-                success: '#4CAF50',
-                warning: '#FFC107'
+                primary: '#2E3440',
+                secondary: '#4C566A',
+                accent: '#88C0D0',
+                error: '#BF616A',
+                info: '#D08770',
+                success: '#A3BE8C',
+                warning: '#EBCB8B'
             },
         },
     },

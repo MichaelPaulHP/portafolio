@@ -86,6 +86,7 @@
 
                     <v-footer
                             absolute
+                            color="primary"
 
                     >
                         <span>
