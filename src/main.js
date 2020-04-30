@@ -10,14 +10,14 @@ import "firebase/firestore";
 import "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAD72otQFhVhMt7uRBjMHxs9Hdz9_hjYOA",
-  authDomain: "michaelpauldev.firebaseapp.com",
-  databaseURL: "https://michaelpauldev.firebaseio.com",
-  projectId: "michaelpauldev",
-  storageBucket: "michaelpauldev.appspot.com",
-  messagingSenderId: "873393379457",
-  appId: "1:873393379457:web:9ce4800fd37ab70fe3d580",
-  measurementId: "G-VJF9JGJK00"
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
+  measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);

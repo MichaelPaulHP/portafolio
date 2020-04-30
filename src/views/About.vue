@@ -28,7 +28,6 @@
 </template>
 <script>
     import TextStroke from "../components/TextStroke";
-
     export default {
         name: "About",
         components: {TextStroke}
