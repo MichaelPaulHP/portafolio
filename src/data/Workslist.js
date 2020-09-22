@@ -4,6 +4,56 @@ let pathImage="/projectImages";
 
 let worksList=[
     new Project(
+      "Escuchando Spotity",
+      "Esta aplicación escucha la canción que escuchas en tu Spotify" +
+      " y te da la opción de buscar esa canción en youtube. " +
+      "También tiene historial.\n" +
+      "Una App con kotlin haciendo uso de MVVM, LiveData, Room de Jetpack y por ultimo Kotlin coroutines con retrofit y Room",
+
+      ["Android","Kotlin","MVVM","LiveData",
+          "MutableLiveData","Room","Jetpack",
+          "Kotlin coroutines",
+      ],
+      [
+          pathImage+"/list/1listeningspotify.jpg",
+          pathImage+"/list/2listeningspotify.jpg",
+          pathImage+"/list/3listeningspotify.jpg",
+          pathImage+"/list/4listeningspotify.jpg",
+      ],
+      [
+          {name:"App Mobil",src:"https://github.com/MichaelPaulHP/"},
+          {name:"BackEnd",src:"https://github.com/MichaelPaulHP/"}
+      ],
+      pathImage+"/list/icon.png"
+    ),
+    new Project(
+      "Spotify y YouTube",
+      "Este fue mi primera aplicación con Flutter para móvil," +
+      " he quedado flipando con BloC(Business Logic Components.) " +
+      " porque todo a partir de eventos he logrado manear la UI" +
+      " según los estados que emiten cada evento. \n" +
+      "Esta es una aplicación te permite buscar o ver video" +
+      " de YouTube a partir de una canción que tienes en " +
+      "Spotify. Para ello he utilizado la API de Spotify" +
+      " y YouTube para obtener las playlists  y buscar" +
+      " en YouTube respectivamente.\n",
+      ["Flutter","Mobile","BLoC","Spotify API","Spotify Authorization","YouTube Data API",
+          "Firebase AUTH","Firebase Cloud Firestore",
+      ],
+      [
+          pathImage+"/sy/1s_and_y.jpg",
+          pathImage+"/sy/2s_and_y.jpg",
+          pathImage+"/sy/3s_and_y.jpg",
+          pathImage+"/sy/4s_and_y.jpg",
+          pathImage+"/sy/5s_and_y.jpg",
+      ],
+      [
+          {name:"App Mobil",src:"https://github.com/MichaelPaulHP/"},
+          {name:"BackEnd",src:"https://github.com/MichaelPaulHP/"}
+      ],
+      pathImage+"/sy/icon.png"
+    ),
+    new Project(
         "Concurrencia",
         "Teniendo conocimientos ya intermedios de Android Java, y" +
         " haber leído Clean Code de Robert C. Martin, Empecé el proyecto con " +

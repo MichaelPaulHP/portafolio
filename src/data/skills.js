@@ -12,12 +12,12 @@ let skills =
         },
         "JavaScript": {
             "VueJS": 8,
-            "VueX": 6,
-            "Svelt": 4,
+            "Svelte": 4,
             "React": 3,
         },
         "Java and Kotlin  for Mobile": {
             "Android Jetpack": 7,
+            "kotlin coroutines":3,
             "junit": 5,
             "MapBox": 6,
             "retrofit": 6,
@@ -27,7 +27,7 @@ let skills =
             "Pandas": 6,
             "Matplotlib": 4,
             "Sklearn": 3,
-            "Flask": 4,
+            "Flask": 5,
         },
         PHP: {
             Laravel: 6,
@@ -35,24 +35,41 @@ let skills =
             PhpUnit: 5,
         },
         GO: {
-            "fundamentals": 7,
+            "fundamentals": 5,
         },
-
+        DART:{
+          "fundamentals": 7,
+        },
+        Flutter:{
+          "BloC":8,
+        },
+        "VueJS":{
+            "VueX": 6,
+            "Vuetify":7,
+            "Nuxt":6,
+        },
         "Front-End Web": {
             html: 6,
             Css: 4,
             JS: 7,
         },
+        Firebase:{
+          "Cloud Firestore":8,
+          "Real DB":5,
+          "Functions":8,
+          "Auth":6,
+        },
+
         "Internet": {
             HTTP: 7,
             DNS:4,
             SEO:3,
         },
 
-
         Mobile: {
-            Android: 7,
-            "Android Jetpack": 6,
+            "Android Java": 7,
+            "Android Kotlin": 7,
+            "Flutter": 7,
         },
         "Version Control Systems": {
             Git: 6,
@@ -93,8 +110,7 @@ let skills =
         },
         "Development Principles":{
             SOLID:4,
-        }
-
+        },
     }
 
 ;

@@ -11,7 +11,7 @@
                     >
                         <v-spacer></v-spacer>
 
-                        <v-btn v-on:click="$vuetify.theme.dark=!$vuetify.theme.dark" elevation="0">
+                        <v-btn disabled v-on:click="$vuetify.theme.dark=!$vuetify.theme.dark" elevation="0">
                             <v-icon v-if="$vuetify.theme.dark" color="yellow" size="small">
                                 fas fa-sun
                             </v-icon>
@@ -20,62 +20,72 @@
                             </v-icon>
                         </v-btn>
 
-                        <v-btn
-                                color="transparent"
-                                elevation="0"
-                                @click.stop="drawer = !drawer"
+                        <v-menu
+                                v-model="menu"
+                                :close-on-content-click="false"
+                                :nudge-width="200"
+                                offset-x
                         >
-                            <v-icon size="medium" >
-                                fas fa-bars
-                            </v-icon>
-                        </v-btn>
+                            <template v-slot:activator="{ on }">
+                                <v-btn
+                                        v-on="on"
+                                        large
+                                        color="transparent"
+                                        elevation="0"
+
+                                >
+                                    <v-icon size="medium" >
+                                        fas fa-bars
+                                    </v-icon>
+                                </v-btn>
+                            </template>
+
+                            <v-card>
+                                <v-list>
+                                    <v-list-item>
+                                        <v-list-item-avatar>
+
+                                        </v-list-item-avatar>
+
+                                        <v-list-item-content>
+                                            <v-list-item-title>Michael Huahuasoncco</v-list-item-title>
+                                            <v-list-item-subtitle>michael_h_p_@hotmail.com</v-list-item-subtitle>
+                                        </v-list-item-content>
+
+                                    </v-list-item>
+                                </v-list>
+                                <v-divider></v-divider>
+                                <v-list>
+                                    <v-list-item
+                                            v-for="item in items"
+                                            :key="item.title"
+                                            link
+                                            :to="item.uri"
+                                    >
+                                        <v-list-item-icon>
+                                            <v-icon size="x-small">{{ item.icon }}</v-icon>
+
+                                        </v-list-item-icon>
+
+                                        <v-list-item-content>
+
+                                            <v-list-item-title>
+                                                {{ item.title }}
+
+                                            </v-list-item-title>
+
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </v-list>
+                            </v-card>
+                        </v-menu>
+
+
 
 
                     </v-app-bar>
 
-                    <v-navigation-drawer
-                            v-model="drawer"
-                            absolute
-                            temporary
-                            right
-                            disable-resize-watcher
-                    >
-                        <v-list-item>
-                            <v-list-item-avatar>
-                                <v-img></v-img>
-                            </v-list-item-avatar>
 
-                            <v-list-item-content>
-                                <v-list-item-title>Michael Huahuasoncco</v-list-item-title>
-                            </v-list-item-content>
-                        </v-list-item>
-
-                        <v-divider></v-divider>
-
-                        <v-list dense>
-
-                            <v-list-item
-                                    v-for="item in items"
-                                    :key="item.title"
-                                    link
-                                    :to="item.uri"
-                            >
-                                <v-list-item-icon>
-                                    <v-icon size="x-small">{{ item.icon }}</v-icon>
-
-                                </v-list-item-icon>
-
-                                <v-list-item-content>
-
-                                    <v-list-item-title>
-                                        {{ item.title }}
-
-                                    </v-list-item-title>
-
-                                </v-list-item-content>
-                            </v-list-item>
-                        </v-list>
-                    </v-navigation-drawer>
 
                     <v-content >
                         <transition name="fade">
@@ -116,7 +126,7 @@
         components: {},
 
         data: () => ({
-
+            menu:false,
             drawer: null,
             items: [
                 {title: '/', icon: 'fas fa-square-full', uri: "/"},

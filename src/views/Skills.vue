@@ -15,7 +15,7 @@
                             v-for="(skillGrup,key) in skills" :key="key"
                     >
 
-                        <v-card-title > {{key}} </v-card-title>
+                        <v-card-title style="font-size: xx-large" > {{key}} </v-card-title>
 
                         <div v-for="(rating,skill) in skillGrup" :key="skill">
                             <v-row>
