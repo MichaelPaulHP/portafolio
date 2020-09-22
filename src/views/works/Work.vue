@@ -11,6 +11,14 @@
                             hide-delimiters
                             height="auto"
                     >
+                      <v-carousel-item  v-if="work.video">
+                        <v-row align="center" justify="center" >
+                          <video width="auto" height="520"  controls>
+                            <source :src="work.video" type="video/mp4">
+                          </video>
+                        </v-row>
+
+                      </v-carousel-item>
 
                         <v-carousel-item  v-for="(item,i) in work.imagesSrc"  :key="i">
                             <v-img :src="item"  contain  aspect-ratio="1.7778" >

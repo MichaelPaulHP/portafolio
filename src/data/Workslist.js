@@ -24,7 +24,8 @@ let worksList=[
           {name:"App Mobil",src:"https://github.com/MichaelPaulHP/"},
           {name:"BackEnd",src:"https://github.com/MichaelPaulHP/"}
       ],
-      pathImage+"/list/icon.png"
+      pathImage+"/list/icon.png",
+      pathImage+"/list/video.mp4"
     ),
     new Project(
       "Spotify y YouTube",
@@ -51,7 +52,9 @@ let worksList=[
           {name:"App Mobil",src:"https://github.com/MichaelPaulHP/"},
           {name:"BackEnd",src:"https://github.com/MichaelPaulHP/"}
       ],
-      pathImage+"/sy/icon.png"
+      pathImage+"/sy/icon.png",
+      pathImage+"/sy/video.mp4"
+
     ),
     new Project(
         "Concurrencia",

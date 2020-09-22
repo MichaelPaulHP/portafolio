@@ -111,6 +111,10 @@ let skills =
         "Development Principles":{
             SOLID:4,
         },
+        "Cloud Computing":{
+            "GCP fundamentals":null,
+            "AWS fundamentals":null,
+        }
     }
 
 ;
