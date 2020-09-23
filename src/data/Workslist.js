@@ -4,6 +4,15 @@ let pathImage="/projectImages";
 
 let worksList=[
     new Project(
+      "Resolver Sudoku",
+      "Una aplicación web hecho con VueJs y Vuetify",
+      ["VueJs" ," Vuetify"],
+      [pathImage+"/sudoku/home.png"],
+      [],
+      pathImage+"/sudoku/icon.png",
+      pathImage+"/sudoku/video.mp4",
+    ),
+    new Project(
       "Escuchando Spotity",
       "Esta aplicación escucha la canción que escuchas en tu Spotify" +
       " y te da la opción de buscar esa canción en youtube. " +
