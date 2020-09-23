@@ -3,15 +3,7 @@ import Project from "../views/works/Project";
 let pathImage="/projectImages";
 
 let worksList=[
-    new Project(
-      "Resolver Sudoku",
-      "Una aplicación web hecho con VueJs y Vuetify",
-      ["VueJs" ," Vuetify"],
-      [pathImage+"/sudoku/home.png"],
-      [],
-      pathImage+"/sudoku/icon.png",
-      pathImage+"/sudoku/video.mp4",
-    ),
+
     new Project(
       "Escuchando Spotity",
       "Esta aplicación escucha la canción que escuchas en tu Spotify" +
@@ -35,6 +27,15 @@ let worksList=[
       ],
       pathImage+"/list/icon.png",
       pathImage+"/list/video.mp4"
+    ),
+    new Project(
+      "Resolver Sudoku",
+      "Una aplicación web hecho con VueJs y Vuetify",
+      ["VueJs" ," Vuetify"],
+      [pathImage+"/sudoku/home.png"],
+      [],
+      pathImage+"/sudoku/icon.png",
+      pathImage+"/sudoku/video.mp4",
     ),
     new Project(
       "Spotify y YouTube",

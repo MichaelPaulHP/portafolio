@@ -13,6 +13,7 @@
 
                     <div
                             v-for="(skillGrup,key) in skills" :key="key"
+                            class="ma-2"
                     >
 
                         <v-card-title style="font-size: xx-large" > {{key}} </v-card-title>

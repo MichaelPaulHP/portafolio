@@ -2,7 +2,7 @@
     <v-container  >
         <v-row justify="center" align="start">
 
-            <v-col cols="6" xs="12">
+            <v-col cols="12" xs="12">
 
                 <v-row >
 
